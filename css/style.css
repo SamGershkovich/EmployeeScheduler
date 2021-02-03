@@ -1,0 +1,869 @@
+/*Farmboy Operations Online Style Sheet*/
+
+/*General*/
+*{
+    font-size: min(max(18px,3vw),30px);
+    font-family: 'Roboto Condensed', sans-serif;
+}
+body{
+    width: max(600px, 100vw);
+    margin: auto;
+    background-image: url(../images/grunge.jpg);
+    overflow: scroll;
+}
+.hidden{
+    display: none !important;
+}
+
+/*Input pseudo styles*/
+::-webkit-datetime-edit { padding: 0px; margin:0px; font-size: min(max(16px,2.3vw),30px); }
+::-webkit-inner-spin-button { display: none; }
+::-webkit-calendar-picker-indicator { float: left; margin:0; padding:0; width:1em;}
+
+:root{
+    --primary: #ab3d3dd6;
+    --secondary:#ffe8a8;
+    --highlight: #f1b9c28f;
+}
+
+#header{
+    height: min(max(120px,20vw),300px);
+    width: max(600px, 100vw);
+}
+figure{ 
+    margin-left: 15%;
+    position: absolute;
+    margin: 8px 10px 10px 25px;
+    width: min(max(116px,26vw),390px);
+}
+
+img{
+    height: auto;
+    width: 100%;
+}
+#top-bar{
+    background-image: url(../images/red.jpg);
+    background-size: cover;
+    width: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: flex-end;
+    height: 66%;
+    align-content: center;
+}
+#name-bar{
+    background-image: url(../images/wood.jpg);
+    background-size: cover;
+    background-repeat: repeat;
+    display: inline-grid;
+    height: 33%;
+    justify-content: flex-end;
+    align-content: center;
+    width: 100%;
+    box-shadow: 0 5px 10px rgb(0, 0, 0, 0.5);
+}
+#header h2{
+    display: inline-block;
+    font-size: min(max(21px,3.5vw),80px);
+    color: #6d241c;
+    letter-spacing: 0.1em;
+    padding-right: min(max(18px,3vw),50px);
+}
+
+h2{
+    display: inline-block;
+    font-size: min(max(21px,5.5vw),80px);
+    color: #9e312d;
+    letter-spacing: 0.1em;
+    padding-right: min(max(18px,3vw),50px);
+    text-transform: uppercase;
+    margin: 0.2em;
+}
+
+.account-button{
+    width: fit-content;
+    color: #799032;
+    display: inline-block;
+    font-size: min(max(18px,6vw),50px);
+    align-self: center;
+    margin-right: 10px;
+    background: white;
+    border-radius: 50%;
+    padding: 0px;
+    border: 1px solid  #96b33e;
+}
+
+.account-button:hover{
+    color: #f2b113;
+}
+#profile-button{
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+}
+#profile-button span{
+    color: white;
+    margin-right: 40px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.home-button i{
+    background: #799032;
+    color: white;
+    border: none !important;
+    border-radius: 10%;
+    padding: 3px;
+    font-size: min(max(16px,4vw),50px);
+}
+.home-button i:hover{
+    background: #f2b113;
+    color: white;   
+}
+
+#log-out{
+    display: inline-block;
+    height: fit-content;
+    margin-right: min(max(18px,3vw),50px);
+    padding: min(max(1.5vw,9px),10px) min(max(3vw,18px),40px);
+    border: 3px solid #96b33e;
+    background: #799032;
+    color: #ffffff;
+    border-radius: 3px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+#log-out:hover{
+    background: #f2b113;
+    color: #ffffff;
+}
+
+sup{
+    text-transform: lowercase;
+    font-weight: 400;
+    font-size: smaller;   
+}
+
+.waiting{
+    color: #777777;
+    pointer-events: none;
+    border: none !important;
+    background: #d4d4d4 !important;
+}
+.disable-mouse{
+    cursor: wait;
+    pointer-events: none;
+}
+
+/*Login page*/
+#login{
+    margin: auto;
+    display: block;
+    width: fit-content;
+    padding: 30px;
+    margin-top: 50px;
+    background-color: var(--primary);
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+#login div{
+   display: grid;
+   grid-auto-flow: column;
+   align-items: center;
+}
+
+#login .visibility{
+    margin: 2.5px;
+}
+  
+#login .visibility:hover{
+      color: white;
+ }
+
+#login input{
+    display: block;
+    margin: 30px auto;
+}
+
+#login input[type=submit]{
+    display: inline-block;
+    height: fit-content;
+    padding: min(max(1.5vw,9px),10px) min(max(3vw,18px),40px);
+    border: 3px solid #96b33e;
+    background: #799032;
+    color: #ffffff;
+    border-radius: 3px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+#login input[type=submit]:hover{
+    background: #f2b113;
+    color: #ffffff;
+}
+
+#login-status{
+    color: white;
+}
+
+
+/*Nav*/
+#main nav{
+    width: 100%;
+    margin: auto;
+    margin-top: min(max(30px,5vw),60px);
+}
+#main nav ul{
+    display: inline-table;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+}
+nav li{
+    display: inline-block;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-top-left-radius: 10%;
+    border-top-right-radius: 25%;
+    padding: min(max(6px,1vw),20px) min(max(12px,2vw),40px);
+    background: var(--secondary);
+    margin-right: min(max(6px,1vw),20px);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+#profile-main nav{
+    width: 95%;
+    margin: auto;
+    margin-top: min(max(30px,5vw),60px);
+}
+#profile-main nav ul{
+    display: inline-table;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.selected{
+    background: var(--primary);
+    color: white;
+}
+
+/*Content*/
+.container-main, .container-profile{
+    display: table;
+    width: 95%;
+    margin: auto;
+    background: var(--primary);
+    position: relative;
+    height: 100%;
+    padding: 20px;
+}
+
+form{
+    border-radius: 5px;
+}
+
+table{
+    padding: min(max(2vw,12px),20px);
+    /* border: 1px solid black; */
+    margin: auto;
+    display: block;
+    margin-top: 20px;
+    border-collapse: collapse;
+    /* background-color: #fff6df; */
+    /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); */
+    /* border-radius: 5px; */
+}
+thead{
+    display: inline-table;
+    width: 100%;
+    text-align: center;
+    border-bottom: 2px solid #661a1ad6;
+    color: white;
+}
+td, th{
+    /* padding: 5px 10px; */
+    width: 50%;
+}
+tr{
+    margin: 20px 5px;
+    display: flex;
+}
+
+#schedule tr td:nth-child(1), #availability tr td:nth-child(1){
+    font-size: min(max(14px,2vw),30px);
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    line-height: 1em;
+    align-self: center;
+}
+tbody{
+    display: inline-table;
+    width: 100%;
+}
+tbody td:nth-child(2){
+    text-align: center;
+}
+
+
+/*Availability*/
+#availability{
+    padding: min(max(18px,3vw),60px);
+}
+
+#availability .disabled{
+    color: #714242;
+}
+#availability thead th{
+    font-size: min(max(18px,3vw),24px);
+    width: 25%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: white;
+}
+#availability td{
+    width: 25%;
+    text-align: center;
+}
+#availability input:disabled, #availability button:disabled{
+    color:#714242;
+    background-color: rgba(239, 239, 239, 0.3);
+    border: 1px solid rgba(118,118,118, 0.3);
+    opacity: 0.85;
+}
+#availability input[type=button], #availability input[type=time], #availability table button{
+    width: 95%;
+    height: 95%;
+    border-radius: 0;
+    border: 1px solid #858585;
+    text-align: center;
+    /* background-color: var(--secondary); */
+}
+
+#availability input[type=checkbox]{
+    width: 100px;
+    height: 24px;
+}
+#availability .button-container{
+    margin: auto;
+    display: block;
+    text-align: center;
+}
+#availability .button-container button{
+    height: fit-content;
+    padding: min(max(1.5vw, 9px),10px) min(max(3vw, 18px),40px);
+    border: 3px solid #96b33e;
+    margin: 20px;
+    background: #799032;
+    color: #ffffff;
+    border-radius: 3px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+#availability .button-container button:hover{
+    background: #f2b113;
+    color: #ffffff;
+}
+#availability .button-container button:disabled{
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+/*Time off requests*/
+
+#time-off{
+    padding: min(max(18px,3vw),60px);
+}
+
+i{
+    padding: 5px;
+}
+i:hover{
+    color: #972c2c;
+}
+
+#time-off #new-request-form + h2{
+    margin-top: min(max(60px,10vw),90px);
+}
+
+#time-off table{
+    margin-top: 0px;
+}
+
+#time-off thead th{
+    width: 20%;
+}
+
+#time-off thead tr{
+    margin: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+#time-off tbody tr{
+    margin: 20px 0px;
+    height: min(max(100px,20vw),100px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.25s;
+    color: white;
+    background: #ffbcbc21;
+}
+#time-off tbody tr:hover{
+    transform: scaleX(1.01) scaleY(1.01);
+    transition: all 0.25s;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+#time-off tbody td{
+    text-align: center;
+    width: 20%;
+    padding: 0;
+    display: grid;
+    height: 100%;
+    grid-auto-flow: column;
+    align-items: center;
+}
+
+#time-off tbody td:nth-child(4), #time-off thead th:nth-child(4){
+    width: 10%;
+}
+
+#time-off tbody input{
+    width: 100%;
+}
+#new-request-form, #new-employee-form, #new-shift-form{
+    padding: min(max(2vw,12px),20px);
+    margin: auto;
+    display: grid;
+    width: 75%;
+}
+
+
+#time-off form input[type=text], #new-shift-form select{
+    margin: 25px 10px !important;
+
+}
+
+#time-off form input[type=submit]{
+    display: inline-block;
+    height: fit-content;
+    padding: min(max(1.5vw,9px),10px) min(max(3vw,18px),40px);
+    border: 3px solid #96b33e;
+    background: #799032;
+    color: #ffffff;
+    border-radius: 3px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    float: right;
+}
+
+#time-off form input[type=submit]:hover{
+    background: #f2b113;
+    color: #ffffff;
+}
+#time-off input{
+    margin: 10px;
+}
+
+#time-off label, #schedule label{
+    display: contents;
+}
+#time-off label span, #schedule label span{
+    margin-left: 10px;
+    color: white;
+}
+
+#new-request-form input[type=date]{
+    margin-top: 0px;
+}
+
+
+.request-edit-row i:nth-child(1){
+    margin-left: auto;
+    margin-right: 5px;
+}
+.request-edit-row i:nth-child(2){
+    margin-right: auto;
+    margin-left: 5px;
+}
+
+.request-input{
+    background: transparent;
+    color: white;
+    border: none;
+}
+
+.status-complete{
+    pointer-events: none;
+}
+
+/*Schedule*/
+
+#schedule{
+    padding: min(max(18px,3vw),60px);
+    width: max-content;
+}
+
+#date-bar{
+    display: grid;
+    margin: min(max(18px,3vw),30px) auto;
+    width: 100%;
+    text-align: center;
+    grid-auto-flow: column;
+    margin-bottom: calc((min(max(18px,3vw),30px) auto) + min(max(18px,3vw),60px));
+}
+
+#date-bar button{
+    color: white;
+    background: #799032;
+    border: 3px solid #96b33e;
+    padding: min(max(4.2px,0.7vw),10px) min(max(12px,2vw),30px);
+    margin: 0px min(max(15px,2.5vw),50px);
+}
+#date-bar button:hover{
+    background: #f2b113;
+    color: #ffffff !important;
+}
+
+#date-bar button i:hover{
+    color: #ffffff !important;
+}
+
+#date-select{
+    justify-self: baseline;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+
+}
+
+#this-week{
+    justify-self: end;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+}
+#week-view{
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+}
+
+#schedule-grid{
+    display: grid;
+    width: 100%;
+    grid-auto-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 1.5em;
+}
+
+.day-slot{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 22% 78%;
+    justify-items: center;
+    transition: all 0.25s;
+}
+.day-slot:hover{
+    transform: scaleX(1.01) scaleY(1.01);
+    transition: all 0.25s;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+
+}
+#schedule .day{
+    align-self: center;
+    background-color: transparent;
+    line-height: 0.4em;
+    display: table;
+    text-align: center;
+}
+#schedule .day i {
+    color: white;
+}
+#schedule .day i:hover {
+    color: #972c2c;
+}
+
+#schedule .day .weekday{
+    font-size: min(max(14px,2vw),30px);
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    line-height: 1em;
+}
+
+#schedule .day .date{
+    font-size: min(max(12px,1.8vw),30px);
+    letter-spacing: 0.1em;
+    color: #f1b9c2;
+    line-height: 1em;
+}
+
+#schedule .multi-time-slot{
+    height: fit-content;
+}
+#schedule .time-slot{
+    align-self: center;
+    height: 100%;
+    vertical-align: middle;
+    background-color: var(--highlight);
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-auto-flow: column;
+}
+
+#schedule .time-block{
+    width: 20%;
+    align-self: center;
+    height: 100%;
+    margin: 0;
+    vertical-align: middle;
+    text-align: center;
+    background-color: grey;
+    border-radius: 5px;
+    display: none;
+    position: relative;
+}
+
+#schedule .time-block input{
+    display: none;
+}
+
+.hour, .hour-active{
+    text-align: center;
+    font-size: min(max(14px,1.8vw),38px);
+    display: inline-grid;
+    width: fit-content;
+    padding: 0px min(max(0.5vw,3px),10px);
+
+}
+
+.hour{
+    color:#ffffff5c;
+}
+
+.hour-active{
+    color: black;
+    background-color: var(--secondary);
+    width: auto;
+}
+
+.hour-half-start{
+    height: 50%;
+    align-self: end;
+
+}
+.hour-half-end{
+    height: 50%;
+}
+.hour-mid{
+    color:#00000052 !important;
+}
+
+/*Department*/
+#department{
+    padding: min(max(18px,3vw),60px);
+    color: white;
+}
+#department select:disabled {
+    color: white;
+    background-color: transparent;
+    opacity: 1;
+    text-align: center;
+    -moz-appearance: none; 
+    -webkit-appearance: none;
+    text-indent: 5px; 
+    border: none;
+    text-align: center;
+    text-align-last: center;
+}
+#department select option { 
+    text-align: center;
+} 
+
+.employee-edit-row i:nth-child(1){
+    margin-left: auto;
+    margin-right: 5px;
+}
+.employee-edit-row i:nth-child(2){
+    margin-right: auto;
+    margin-left: 5px;
+}
+
+#department form input[type=submit], #new-shift-form input[type=submit] {
+    display: inline-block;
+    height: fit-content;
+    padding: min(max(1.5vw,9px),10px) min(max(3vw,18px),40px);
+    border: 3px solid #96b33e;
+    background: #799032;
+    color: #ffffff;
+    border-radius: 3px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+#department form input[type=submit]:hover, #new-shift-form input[type=submit]:hover {
+    background: #f2b113;
+    color: #ffffff;
+}
+
+#department input, #department select, #new-shift-form input, #new-shift-form select {
+    margin: 12.5px;
+}
+#new-employee-container, #new-shift-container {
+    margin-top: 20px;
+}
+
+
+#department tbody tr {
+    margin: 20px 0px;
+    height: min(max(100px,20vw),100px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.25s;
+    color: white;
+    background: #ffbcbc21;
+}
+#department tbody td {
+    text-align: center;
+    width: 50%;
+    padding: 0;
+    display: grid;
+    height: 100%;
+    grid-auto-flow: column;
+    align-items: center;
+}
+#department thead th{
+    font-size: min(max(18px,3.5vw),32px);
+    width: 50%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: white;
+}
+
+/*Profile*/
+#profile div {
+    color: white;
+    margin: 20px 120px;
+    font-size: min(max(18px,5vw),40px);
+}
+#profile div:nth-child(1) {
+    margin-top: 40px;
+}
+
+#profile div:last-child {
+    margin-bottom: 160px;
+}
+
+#profile div span {
+   text-transform: uppercase;
+   letter-spacing: 0.1em;
+   font-weight: 700;
+   color: var(--highlight);
+}
+
+/*Security*/
+
+#status-text{
+    text-align: center;
+    color: white;
+}
+
+#security div, #security input[type=submit] {
+    display: block;
+    margin: 10px 120px;
+}
+
+#security div {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 10fr 1fr;
+    justify-items: center;
+}
+
+#security div:nth-child(1) {
+    margin-top: 40px;
+}
+
+#security form{
+display: grid;
+}
+#security input[type=password] #security input[type=text]{
+    width: 90%;
+}
+
+#security .status{
+    pointer-events: none;
+}
+
+#security .visibility{
+  margin: 2.5px;
+}
+
+#security .visibility:hover{
+    color: white;
+}
+
+#security .fa-check{
+    color: #3ebd3e;
+}
+
+#security .fa-times{
+    color: red;
+}
+
+#security .fa-exclamation-triangle{
+    color: #ffc800;
+}
+
+#security div input{
+    width: 100%;
+}
+#security input[type=submit]{
+    display: block;
+    height: fit-content;
+    padding: min(max(1.5vw,9px),10px) min(max(3vw,18px),40px);
+    border: 3px solid #96b33e;
+    background: #799032;
+    color: #ffffff;
+    border-radius: 3px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    width: 38%;
+    justify-self: center;
+}
+#security input[type=submit]:hover{
+    background: #f2b113;
+    color: #ffffff;
+}
+#security  input[type=submit]:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
