@@ -497,7 +497,7 @@ window.addEventListener("load", function () {
     //#region Time-off
 
     function getRequests() {
-        fetch("templates/time_off_requests.php", { credentials: "include" })
+        fetch("templates/requests.php", { credentials: "include" })
             .then(response => response.text())
             .then(refreshRequests);
         function refreshRequests(data) {
